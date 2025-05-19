@@ -13,7 +13,9 @@
         <nav>
             <a href="#what">What Is Plugdata?</a> |
             <a href="#install">Install</a> |
-            <a href="#tutorial">Tutorial</a>
+            <a href="#tutorial">Tutorial</a> |
+            <a href="#using-delay">Using Delay</a> |
+            <a href="#using-reverb">Using Reverb</a>
         </nav>
     </header>
 
@@ -46,8 +48,8 @@
                 <img src="images/adc.png" alt="Plugdata adc~ object screenshot">
             </li>
             <li>
-                Next go into the effects tab on the left. Drag the delay object into the screen. And then click the
-                circle at the botom left of the adc object and
+                Next, go into the effects tab on the left. Drag the delay object into the screen. And then click the
+                circle at the bottom left of the adc object and
                 drag a connection to the top left circle of the delay object. Do the same for the right cirle of the adc
                 and connect it to the same input as you
                 did for the left.
@@ -55,7 +57,7 @@
                 <img src="images/delay.png" alt="Plugdata adc~ object screenshot">
             </li>
             <li>
-                Back in the effects tab drag and drop the Reverb object under the Delay object. Connect the bollow left
+                Back in the effects tab, drag and drop the Reverb object under the Delay object. Connect the bottom left
                 output of delay to the top
                 left input of Reverb.
                 <br>
@@ -76,6 +78,70 @@
         </ol>
 
     </section>
+    <section id="using-delay">
+        <h2>Using the Delay Effect</h2>
+        <p>Here’s what each Delay parameter does:</p>
+        <ul>
+            <li><strong>Time</strong><br>
+                Sets how long the delay is—in other words, the gap between the original sound and its echo. A short Time
+                (e.g. 50 ms) gives a slap-back effect; a long Time (e.g. 500 ms or more) creates distinct repeats.
+            </li>
+            <li><strong>Cutoff</strong><br>
+                Controls the cutoff frequency of a built-in low-pass filter on the delayed signal. Turning Cutoff down
+                rolls off high frequencies (making echoes sound darker), while turning it up passes more of the full
+                spectrum through.
+            </li>
+            <li><strong>Resonance (Reason)</strong><br>
+                Often paired with Cutoff, Resonance boosts frequencies around the cutoff point. Higher Resonance makes
+                the filter peak—giving the delay a more pronounced “squelchy” or ringing character.
+            </li>
+            <li><strong>Feedback</strong><br>
+                Determines how much of the delayed output is fed back into the delay line as input for the next repeat.
+                Low Feedback (10–20 %) yields just a few echoes; high Feedback (70–100 %) makes repeats build up and can
+                even self-oscillate.
+            </li>
+            <li><strong>Dry/Wet</strong><br>
+                Balances the unprocessed (“dry”) signal with the delayed (“wet”) signal. At 0 % you hear only the
+                original; at 100 % you hear only echoes. A middle setting blends both.
+            </li>
+            <li><strong>Clear</strong><br>
+                When activated, immediately empties the delay buffer—cutting off any running echoes. Useful for
+                resetting the effect cleanly between sections.
+            </li>
+        </ul>
+    </section>
+
+    <section id="using-reverb">
+        <h2>Using the Reverb Effect</h2>
+        <p>Here’s what each Reverb parameter does:</p>
+        <ul>
+            <li><strong>Pre Delay</strong><br>
+                Adds a short delay before the reverb tail begins. Small values (e.g. 20–50 ms) separate the initial
+                sound from its reverberation; larger values create a sense of space or distance.
+            </li>
+            <li><strong>Size</strong><br>
+                Controls the perceived room size. Smaller Size values simulate small rooms or chambers, giving a
+                tighter, shorter decay. Larger values emulate halls or cathedrals with longer, more diffuse tails.
+            </li>
+            <li><strong>Damp</strong><br>
+                Damping reduces high frequencies in the reverb tail. Turning Damp up makes the reverberation darker and
+                less bright over time, mimicking soft or absorbent surfaces.
+            </li>
+            <li><strong>Cutoff</strong><br>
+                Sets the cutoff frequency of a low-pass filter on the wet signal. Lower Cutoff rolls off more highs at
+                the filter stage, while higher Cutoff passes more of the full spectrum into the reverb.
+            </li>
+            <li><strong>Dry/Wet</strong><br>
+                Balances the original (“dry”) signal with the reverberated (“wet”) signal. 0 % means only the dry
+                source; 100 % means only reverb. Middle settings blend both for natural ambience.
+            </li>
+            <li><strong>Clear</strong><br>
+                When activated, immediately resets the reverb buffer and stops all ongoing reverberation. Useful for
+                cutting off tails between sections or preventing buildup.
+            </li>
+        </ul>
+    </section>
+
 
     <footer>
         <p>Project by Drake Parks, Endeavour Charter School, Watertown WI</p>
