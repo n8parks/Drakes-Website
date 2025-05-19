@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Introduction to Plugdata</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>How to Use Plugdata</h1>
+        <nav>
+            <a href="#what">What Is Plugdata?</a> |
+            <a href="#install">Install</a> |
+            <a href="#tutorial">Tutorial</a>
+        </nav>
+    </header>
+
+    <section id="what">
+        <h2>What Is Plugdata?</h2>
+        <p>
+            Plugdata is a free, visual Pure Data environment for creating and exporting audio patches as plugins (VST3,
+            AU, LV2, CLAP).
+        </p>
+    </section>
+
+    <section id="install">
+        <h2>Installing Plugdata</h2>
+        <ol>
+            <li>Go to <a href="https://plugdata.org">plugdata.org</a> and download the installer for your OS (Windows,
+                macOS, or Linux).</li>
+            <li>Run the installer and launch Plugdata.</li>
+        </ol>
+    </section>
+
+    <section id="tutorial">
+        <h2>Step-by-Step Plugin Tutorial</h2>
+        <h3>Creating “GainControlPlugin”</h3>
+        <ol>
+            <li>Open Plugdata and make a new patch named <code>gain_control.pd</code>.</li>
+            <li>Add <code>adc~ 1 2</code>, <code>*~</code>, <code>gain</code> parameter, and <code>dac~ 1 2</code>.</li>
+            <li>Test with ▶. Adjust <code>gain</code> knob.</li>
+            <li>File ▶ Compile… ▶ DPF Audio Plugin ▶ VST3 ▶ Compile. Save the resulting <code>.vst3</code>.</li>
+            <li>Load in your DAW and play with the new plugin!</li>
+        </ol>
+
+    </section>
+
+    <footer>
+        <p>Project by Drake Parks, Endeavour Charter School, Watertown WI</p>
+    </footer>
+</body>
+
+</html>
