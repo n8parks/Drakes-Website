@@ -36,13 +36,43 @@
 
     <section id="tutorial">
         <h2>Step-by-Step Plugin Tutorial</h2>
-        <h3>Creating “GainControlPlugin”</h3>
+        <h3>Creating “Simple Delay and Reverb Plugin”</h3>
         <ol>
-            <li>Open Plugdata and make a new patch named <code>gain_control.pd</code>.</li>
-            <li>Add <code>adc~ 1 2</code>, <code>*~</code>, <code>gain</code> parameter, and <code>dac~ 1 2</code>.</li>
-            <li>Test with ▶. Adjust <code>gain</code> knob.</li>
-            <li>File ▶ Compile… ▶ DPF Audio Plugin ▶ VST3 ▶ Compile. Save the resulting <code>.vst3</code>.</li>
-            <li>Load in your DAW and play with the new plugin!</li>
+            <li>Open Plugdata and make a new patch with your chosen name.</li>
+            <li>
+                Double click in the screen and type "adc~ 1 2".
+                This is the analog-to-digital converter. It allows sound to come into the plugin.
+                <br>
+                <img src="images/adc.png" alt="Plugdata adc~ object screenshot">
+            </li>
+            <li>
+                Next go into the effects tab on the left. Drag the delay object into the screen. And then click the
+                circle at the botom left of the adc object and
+                drag a connection to the top left circle of the delay object. Do the same for the right cirle of the adc
+                and connect it to the same input as you
+                did for the left.
+                <br>
+                <img src="images/delay.png" alt="Plugdata adc~ object screenshot">
+            </li>
+            <li>
+                Back in the effects tab drag and drop the Reverb object under the Delay object. Connect the bollow left
+                output of delay to the top
+                left input of Reverb.
+                <br>
+                <img src="images/reverb.png" alt="Plugdata adc~ object screenshot">
+            </li>
+            <li>
+                Double click under the Reverb and type "dac~". This is the digital-to-analog converter that sends the
+                audio out of your patch and into your speakers. Drag the left output of Reverb to the left input of dac.
+                Repeat the process for the right output and input.
+                <br>
+                <img src="images/dac.png" alt="Plugdata adc~ object screenshot">
+            </li>
+            <li>
+                The final patch should look like this:
+                <br>
+                <img src="images/full_look.png" alt="Plugdata adc~ object screenshot" class="full-look">
+            </li>
         </ol>
 
     </section>
